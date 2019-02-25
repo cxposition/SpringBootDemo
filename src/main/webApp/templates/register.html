@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:text-align="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎注册</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1 style="text-align: center">欢迎注册</h1>
+
+    <form th:action="@{/register}" th:object="${user}" method="post">
+
+        <div align="center">
+            <label for="username">username:</label>
+            <input type="text" name="username"  id="username" class="form-control" style="width: 500px"/>
+            <label for="password">password:</label>
+            <input type="password" name="password" id="password" class="form-control" style="width: 500px"/>
+            <label for="password">password2</label>
+            <input type="password" name="password2" id="password2" class="form-control" style="width: 500px"/>
+            <div style="text-align:center" >
+                <input type="submit" value="submit" class="btn btn-primary">
+                <input type="reset" value="reset"  class="btn btn-primary">
+            </div>
+            <!--input中的submit属性是定义一个提交按钮。提交按钮会把表单数据发送到服务器
+            而button定义可点击按钮（多数情况下，通过JavaScript启动脚本）。
+            reset值定义重置按钮。重置按钮会清除表单中的所有数据。
+
+            -->
+
+        </div>
+
+    </form>
+
+</body>
+</html>
